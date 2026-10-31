@@ -1,0 +1,17 @@
+{
+  "name": "__PROJECT_NAME__",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "api",
+    "web"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n api,web -c blue,green \"npm:dev --workspace api\" \"npm:dev --workspace web\"",
+    "build": "npm run build --workspace api && npm run build --workspace web",
+    "typecheck": "npm run typecheck --workspace api && npm run typecheck --workspace web"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

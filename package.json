@@ -1,0 +1,55 @@
+{
+  "name": "create-forgekit",
+  "version": "1.0.0",
+  "description": "A modern full-stack project scaffolding CLI.",
+  "type": "module",
+  "bin": {
+    "create-forgekit": "./dist/cli.js"
+  },
+  "files": [
+    "dist/**",
+    "templates/**",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "npm run build && node --test",
+    "pack:check": "npm pack --dry-run"
+  },
+  "keywords": [
+    "create",
+    "forgekit",
+    "cli",
+    "scaffolding",
+    "typescript",
+    "react",
+    "vite",
+    "express",
+    "mongodb"
+  ],
+  "author": "Lokith M",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lo-kith/We-Together.git",
+    "directory": "builds/package"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "config": {
+    "forgekit": {}
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.11.0",
+    "boxen": "^8.0.1",
+    "ora": "^8.2.0",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "typescript": "^5.8.3"
+  }
+}
